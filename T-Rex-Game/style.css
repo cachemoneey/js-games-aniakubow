@@ -1,0 +1,46 @@
+.dino {
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    background-image: url('t-rex.png');
+    bottom: 0;
+}
+
+#desert {
+    position: absolute;
+    background-image: url('t-rex-background.png');
+    height: 200px;
+    width: 100%;
+    bottom: 0;
+    background-repeat: repeat-x;
+    animation: slideright 600s infinite linear;
+    --webkit-animation: slideright 600s infinite linear;
+}
+
+.obstacle {
+    position: absolute;
+    background-image: url('cacti.png');
+    height: 60px;
+    width: 60px;
+    bottom: 0; 
+}
+
+@keyframes slideright {
+    from {
+        background-position: 70000%;
+    }
+
+    to {
+        background-position: 0%;
+    }
+}
+
+@-webkit-keyframes slideright {
+    from {
+        background-position: 70000%;
+    }
+
+    to {
+        background-position: 0%;
+    }
+}
