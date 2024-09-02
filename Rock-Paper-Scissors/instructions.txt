@@ -1,0 +1,68 @@
+// html 
+
+body
+    h2 txt Computer choice: + span id computer-choice
+    h2 txt Your choice: + span id user-choice
+    h2 txt Result: + span id result
+
+    button id rock + txt Rock
+    button id scissors + txt scissors
+    button id paper + txt paper
+
+    script src 
+/body
+
+
+// js
+
+4 const 
+computer choice display doc get id 
+user choice display doc get id 
+result display doc get id 
+possible choices doc qsa button
+
+3 let 
+user choice
+computer choice
+result
+
+- for each possible choice in possible choices => add an e list to possible choice when clicked func with param (e) =>
+    - set user choice as target id of e
+    - set inner html of user choice display as user choice
+    - call generate computer choice func
+    - call get result func
+}))
+
+
+func generate computer choice 
+    declare c random num as a random number() x 3 all rounded up + 1
+
+    if random num completely equals 1
+        - set computer choice as 'rock'
+    if random num completely equals 2
+        - set computer choice as 'paper'
+    if random num completely equals 3
+        - set computer choice as 'scissors'
+    
+    set inner html of computer choice display as computer choice
+
+func get result
+    if computer choice completely equals user choice
+        - set result as a draw in string
+    
+    if computer choice is 'rock' and user choice is 'paper'
+        - set result as 'you win!'
+    if computer choice is 'rock' and user choice is 'scissors'
+        - set result as 'you lose!'
+
+    if computer choice is 'paper' and user choice is 'scissors'
+        - set result as 'you win!
+    if computer choice is 'paper' and user choice is 'rock'
+        - set result as 'you lose!
+
+    if computer choice is 'scissors' and user choice is 'rock'
+        - set result as 'you win!'
+    if computer choice is 'scissors' and user choice is 'paper'
+        - set result as 'you lose!'
+    
+    set inner html of result display as result
